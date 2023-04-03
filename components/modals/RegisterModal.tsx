@@ -57,9 +57,9 @@ const RegisterModal = () => {
     }
   }, [email, password, registerModal, username, name]);
 
-  useEffect(() => {
-    toast.success('Account created.');
-  }, [])
+  // useEffect(() => {
+  //   toast.success('Account created.');
+  // }, [])
   
 
   const bodyContent = (
