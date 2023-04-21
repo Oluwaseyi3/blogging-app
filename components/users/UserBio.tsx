@@ -15,7 +15,6 @@ interface UserBioProps{
 
 const UserBio: React.FC<UserBioProps> = ({userId}) => {
    const {data: currentUser} = useCurrentUser()
-  
    const {data: fetchedUser} = useUser(userId)
   
    
@@ -29,6 +28,8 @@ const UserBio: React.FC<UserBioProps> = ({userId}) => {
       }
       return format(new Date(fetchedUser.createdAt), "MMMM yyyy")
    }, [fetchedUser?.createdAt])
+
+   console.log(fetchedUser?.followingIds?.length)
     return (
     <div className='border-b-[1px] border-neutral-800 pb-4  '>
         <div className='flex justify-end p-2'>
