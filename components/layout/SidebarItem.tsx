@@ -3,19 +3,20 @@ import { IconType} from "react-icons"
 import { useRouter  } from 'next/router';
 import useCurrentUser from '@/hooks/useCurrentUser';
 import useLoginModal from '@/hooks/useLoginModal';
-
+import { BsDot } from 'react-icons/bs'
 interface SidebarItemProps {
     label: string;
     href?: string;
     icon: IconType;
     onClick?: () => void; 
     auth?:boolean;
+    alert: boolean;
 }
 
 
 
 
-const SidebarItem: React.FC <SidebarItemProps> = ({label ,href, icon: Icon, onClick, auth}) => {
+const SidebarItem: React.FC <SidebarItemProps> = ({label ,href, alert, icon: Icon, onClick, auth}) => {
 
    const loginModal = useLoginModal( )
    const {data: currentUser} = useCurrentUser()
@@ -52,6 +53,9 @@ const SidebarItem: React.FC <SidebarItemProps> = ({label ,href, icon: Icon, onCl
          lg:hidden
         '>
          <Icon  size={28} color="white"/>
+         {
+          alert ? <BsDot size={80} className='text-sky-500 -top-4 left-0'/> : null
+         }
         </div>
         <div
         className='
@@ -64,13 +68,16 @@ const SidebarItem: React.FC <SidebarItemProps> = ({label ,href, icon: Icon, onCl
          hover:bg-slate-300
          hover:bg-opacity-10
          cursor-pointer
-         items-center 
+         items-center  
         '
         >
         <Icon size={24} color="white" />
         <p className='hidden lg:block text-white text-xl'>
             {label}
         </p>
+        {
+          alert ? <BsDot size={70} className='text-sky-500 -top-4 left-0'/> : null
+         }
         </div>
     </div>
   )

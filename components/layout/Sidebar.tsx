@@ -23,7 +23,8 @@ const items=[{
     label: "Notifications",
     href: "/notifications",
     icon: BsBellFill,
-    auth: true
+    auth: true,
+    alert: true
 }, {
     label: "Profile",
     href: `/users/${currentUser?.id}`,
@@ -44,6 +45,7 @@ const items=[{
                          label={item.label}
                          icon={item.icon}
                          auth={item.auth}
+                         alert={item.alert}
                         />
                     ))
                 }
