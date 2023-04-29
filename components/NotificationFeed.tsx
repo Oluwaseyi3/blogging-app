@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import useCurrentUser from "@/hooks/useCurrentUser";
 import useNotifications from "@/hooks/useNotifications";
-import { BsTwitter } from "react-icons/bs";
+import {AiOutlineMessage} from "react-icons/ai"
 
 const NotificationFeed = () => {
 
@@ -34,7 +34,7 @@ return (
        {
         fetchedNotifications.map((notification: Record<string, any>) => (
             <div className="flex flex-row items-center p-6 gap-4 border-b-[1px] border-neutral-800" key={notification.id}>
-                <BsTwitter color="white" size={12}/>
+                <AiOutlineMessage color="white" size={12}/>
                 <p className="text-white">
                     {notification.body}
                 </p>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import {BsTwitter} from "react-icons/bs"
+import {AiOutlineMessage} from "react-icons/ai"
 
 
 const SidebarLogo = () => {
@@ -20,7 +20,7 @@ const SidebarLogo = () => {
      hover:bg-opacity-10
      cursor-pointer
     '>
-        <BsTwitter 
+        <AiOutlineMessage 
         size={30} color="white "
         />
     </div>
