@@ -86,7 +86,7 @@ const Form: React.FC<FormProps> = ({ placeholder, isComment, postId }) => {
                 transition"
             />
             <div className="mt-4 flex flex-row justify-end">
-              <Button disabled={isLoading || !body} onClick={onSubmit} label="Share" />
+              <Button disabled={isLoading || !body} onClick={onSubmit}  label="Share" />
             </div>
           </div>
         </div>

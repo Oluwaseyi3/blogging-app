@@ -3,8 +3,8 @@ interface ButterProps {
     secondary?: boolean;
     fullWidth?: boolean;
     large?: Boolean;
-    disabled:boolean;
-    outline: boolean;
+    disabled?:boolean;
+    outline?: boolean;
     onClick: () => void;
 }
 
