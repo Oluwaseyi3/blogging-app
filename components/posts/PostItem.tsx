@@ -9,17 +9,15 @@ import { AiOutlineHeart, AiFillHeart, AiOutlineMessage } from "react-icons/ai";
 
 interface PostItemProps{
     data: Record<string, any>;
-    userId: string;
+    userId?: string;
 }
 
-const PostItem: React.FC<PostItemProps> = ({
-    data, userId
-}) => {
+const PostItem: React.FC<PostItemProps> = ({ data = {}, userId }) => {
     const router = useRouter()
     const loginModal = useLoginModal()
 
     const {data: currentUser} = useCurrentUser()
-    const {hasLiked, toggleLike} = useLike({postId: data.id, userId})
+  const { hasLiked, toggleLike } = useLike({ postId: data.id, userId});
 
     const goToUser = useCallback((event: any) => {
         event.stopPropagation()

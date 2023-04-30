@@ -6,7 +6,7 @@ import usePosts from "./usePosts"
 import { toast } from "react-hot-toast"
 import axios from "axios"
 
-const useLike = ({postId, userId} : {postId: string, userId:string}) => {
+const useLike = ({postId, userId} : {postId: string, userId?:string}) => {
 
      const {data: currentUser} = useCurrentUser()
      const {data: fetchedPost, mutate:mutateFetchedPost} = usePost(postId)
