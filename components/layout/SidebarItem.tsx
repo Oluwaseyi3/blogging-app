@@ -10,7 +10,7 @@ interface SidebarItemProps {
     icon: IconType;
     onClick?: () => void; 
     auth?:boolean;
-    alert: boolean;
+    alert?: boolean;
 }
 
 
