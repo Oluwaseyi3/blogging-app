@@ -9,7 +9,7 @@ import { AiOutlineHeart, AiFillHeart, AiOutlineMessage } from "react-icons/ai";
 
 interface PostItemProps{
     data: Record<string, any>;
-    userId?: string;
+    userId: string;
 }
 
 const PostItem: React.FC<PostItemProps> = ({
